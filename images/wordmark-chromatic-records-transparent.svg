@@ -1,0 +1,25 @@
+<svg width="442" height="116" viewBox="80 210 442 116" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="wtTopR"><rect x="0" y="196" width="600" height="26"/></clipPath>
+    <clipPath id="wtMidR"><rect x="0" y="222" width="600" height="26"/></clipPath>
+    <clipPath id="wtBotR"><rect x="0" y="248" width="600" height="30"/></clipPath>
+  </defs>
+
+  <g clip-path="url(#wtTopR)">
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#ff1e3c" letter-spacing="1" transform="translate(-8,0)">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#1ec8ff" letter-spacing="1" transform="translate(8,0)" opacity="0.9">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#f0efec" letter-spacing="1" opacity="0.9">AFTER HOURS</text>
+  </g>
+  <g clip-path="url(#wtMidR)">
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#ff1e3c" letter-spacing="1" transform="translate(7,0)">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#1ec8ff" letter-spacing="1" transform="translate(-7,0)" opacity="0.9">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#f0efec" letter-spacing="1" opacity="0.9">AFTER HOURS</text>
+  </g>
+  <g clip-path="url(#wtBotR)">
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#ff1e3c" letter-spacing="1" transform="translate(-5,0)">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#1ec8ff" letter-spacing="1" transform="translate(5,0)" opacity="0.9">AFTER HOURS</text>
+    <text x="300" y="255" text-anchor="middle" font-family="'Arial Black', Impact, Haettenschweiler, sans-serif" font-size="52" font-weight="900" fill="#f0efec" letter-spacing="1" opacity="0.9">AFTER HOURS</text>
+  </g>
+
+  <text x="300" y="320" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="400" fill="#8f8d92" letter-spacing="4">RECORDS</text>
+</svg>
