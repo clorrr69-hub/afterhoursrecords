@@ -89,6 +89,13 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
   .hero-logo img.hero-wordmark{width:min(380px,80vw);height:auto;}
   .hero p.sub{max-width:520px;color:var(--text-dim);font-size:16px;margin:0 auto 24px;}
   .hero-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .hero-feature{display:flex;align-items:center;gap:26px;text-align:left;margin-top:14px;width:100%;max-width:620px;background:rgba(20,20,22,0.85);border:1px solid var(--border);border-radius:8px;padding:18px;transition:border-color .25s,transform .25s;}
+  .hero-feature:hover{border-color:var(--accent);transform:translateY(-3px);}
+  .hero-feature img{width:170px;height:170px;object-fit:cover;border-radius:4px;flex-shrink:0;}
+  .hero-feature h3{font-size:26px;font-weight:800;margin-bottom:4px;}
+  .hero-feature p{color:var(--text-dim);font-size:14.5px;margin-bottom:16px;}
+  .hero-feature .btn-primary{display:inline-block;padding:11px 24px;}
+  @media(max-width:600px){.hero-feature{flex-direction:column;text-align:center;}.hero-feature{gap:14px;padding:16px;}.hero-feature img{width:180px;height:180px;}.hero-feature h3{font-size:22px;}.hero-feature p{margin-bottom:12px;}}
   .btn-primary{background:var(--accent);color:#fff;padding:15px 34px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:transform .25s,box-shadow .25s;}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(227,44,20,0.4);}
   .btn-ghost{border:1px solid var(--border);color:var(--text);padding:15px 34px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;transition:border-color .25s,color .25s;}
@@ -182,29 +189,22 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
     <img class="hero-wordmark" src="images/wordmark-chromatic-records-transparent.svg" alt="After Hours Records">
   </div>
   <p class="sub">A home for late-night, genre-fearless music — indie, post-punk, and electronic releases from Toronto and beyond.</p>
-  <div class="hero-btns">
-    <a href="#releases" class="btn-primary">Hear the Releases</a>
-    <a href="#listen" class="btn-ghost">Listen</a>
-  </div>
+  <a class="hero-feature" href="https://hypeddit.com/stillwaves/vacanteyes-presave" target="_blank" rel="noopener">
+    <img src="images/stillwaves-vacant-eyes-cover.jpg" alt="Vacant Eyes cover art">
+    <div class="hero-feature-body">
+      <div class="featured-tag">Featured Release · Out Now</div>
+      <h3>Vacant Eyes</h3>
+      <p>StillWaves — the label's debut release.</p>
+      <span class="btn-primary">Listen Now</span>
+    </div>
+  </a>
 </section>
 
 
 <section class="section" id="featured">
   <div class="container">
     <div class="section-tag">Featured</div>
-    <h2 class="section-title">Introducing StillWaves</h2>
-    <p class="section-desc">The first artist signed to After Hours Records.</p>
-    <div class="featured">
-      <div class="featured-art"><img src="images/stillwaves-vacant-eyes-cover.jpg" alt="Vacant Eyes cover art"></div>
-      <div class="featured-body">
-        <div class="featured-tag">Debut Release</div>
-        <h3>Vacant Eyes</h3>
-        <p>StillWaves' debut single — the label's first release. Out now on all platforms.</p>
-        <a class="listen-link" href="https://hypeddit.com/stillwaves/vacanteyes-presave" target="_blank" rel="noopener">Listen Now →</a>
-      </div>
-    </div>
-
-    <h3 class="subheading">From Odonis Odonis</h3>
+    <h2 class="section-title">From Odonis Odonis</h2>
     <div class="featured" style="margin-top:24px;">
       <div class="featured-art"><img src="https://i.scdn.co/image/ab67616d0000b27358656d00333d4c3c23eccd66" alt="Icon EP cover art"></div>
       <div class="featured-body">
