@@ -51,7 +51,7 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
     --accent-2:#1ec8ff;
   }
   *{margin:0;padding:0;box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
+  html{scroll-behavior:smooth;scroll-padding-top:72px;}
   body{
     background:var(--bg);color:var(--text);
     font-family:'Helvetica Neue',Arial,sans-serif;line-height:1.6;overflow-x:hidden;
@@ -73,7 +73,7 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
   .nav-links{display:flex;gap:28px;font-size:12px;letter-spacing:1px;text-transform:uppercase;}
   .nav-links a{color:var(--text-dim);transition:color .25s;}
   .nav-links a:hover{color:var(--accent);}
-  @media(max-width:700px){.nav-links{display:none;}}
+  @media(max-width:900px){.nav-links{display:none;}}
 
   .hero{
     min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
@@ -152,6 +152,26 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
   .footer-social{display:flex;gap:20px;font-size:13px;color:var(--text-dim);}
   .footer-social a:hover{color:var(--accent);}
   .footer-bottom{margin-top:30px;padding-top:20px;border-top:1px solid var(--border);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:12px;color:var(--text-dim);}
+  /* ---------- Mobile menu ---------- */
+  .menu-toggle{display:none;position:relative;width:44px;height:44px;margin-left:12px;background:none;border:1px solid var(--border);color:var(--text);cursor:pointer;flex-shrink:0;transition:border-color .25s;}
+  .menu-toggle:hover,.menu-toggle[aria-expanded="true"]{border-color:var(--accent);}
+  .menu-toggle span{position:absolute;left:12px;right:12px;height:2px;background:currentColor;box-shadow:-1px 0 rgba(255,30,60,0.7),1px 0 rgba(30,200,255,0.7);transition:transform .25s,opacity .2s,top .25s;}
+  .menu-toggle span:nth-child(1){top:15px;}
+  .menu-toggle span:nth-child(2){top:21px;}
+  .menu-toggle span:nth-child(3){top:27px;}
+  .menu-toggle[aria-expanded="true"] span:nth-child(1){top:21px;transform:rotate(45deg);}
+  .menu-toggle[aria-expanded="true"] span:nth-child(2){opacity:0;}
+  .menu-toggle[aria-expanded="true"] span:nth-child(3){top:21px;transform:rotate(-45deg);}
+  .mobile-menu{display:none;}
+  @media(max-width:900px){
+    .menu-toggle{display:block;}
+    .mobile-menu{position:absolute;top:100%;left:0;right:0;margin-top:2px;background:rgba(8,8,10,0.97);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);box-shadow:0 20px 40px rgba(0,0,0,0.6);max-height:calc(100vh - 80px);overflow-y:auto;}
+    .mobile-menu.open{display:block;}
+    .mobile-menu a{display:block;padding:16px 24px;border-top:1px solid var(--border);font-family:'Oswald',Arial,sans-serif;font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--text);transition:color .2s,background .2s;}
+    .mobile-menu a:first-child{border-top:none;}
+    .mobile-menu a:hover,.mobile-menu a:focus{color:var(--accent);background:rgba(255,255,255,0.03);}
+    .mobile-menu a.mobile-menu-cta{margin:14px 24px 20px;padding:14px;border:1px solid var(--accent);background:var(--accent);color:#fff;text-align:center;}
+  }
 </style>
 </head>
 <body>
@@ -167,7 +187,16 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
       <a href="#mailing">Mailing List</a>
       <a href="https://afterhoursstudio.ca" target="_blank" rel="noopener">Studio</a>
     </div>
+    <button class="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span><span></span></button>
   </nav>
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#about">About</a>
+    <a href="#featured">Featured</a>
+    <a href="#releases">Releases</a>
+    <a href="#listen">Listen</a>
+    <a href="#mailing">Mailing List</a>
+    <a href="https://afterhoursstudio.ca" target="_blank" rel="noopener">Studio</a>
+  </div>
 </header>
 
 <section class="hero">
@@ -347,5 +376,18 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
   </div>
 </footer>
 
+<script>
+// Mobile menu
+(function(){
+  var btn=document.querySelector('.menu-toggle'),menu=document.getElementById('mobile-menu');
+  if(!btn||!menu)return;
+  function set(open){menu.classList.toggle('open',open);btn.setAttribute('aria-expanded',open?'true':'false');btn.setAttribute('aria-label',open?'Close menu':'Open menu');}
+  btn.addEventListener('click',function(e){e.stopPropagation();set(!menu.classList.contains('open'));});
+  menu.addEventListener('click',function(e){if(e.target.closest('a'))set(false);});
+  document.addEventListener('click',function(e){if(menu.classList.contains('open')&&!menu.contains(e.target))set(false);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('open')){set(false);btn.focus();}});
+  window.addEventListener('resize',function(){if(window.innerWidth>900)set(false);});
+})();
+</script>
 </body>
 </html>
