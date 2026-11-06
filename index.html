@@ -95,6 +95,11 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
   .hero-feature h3{font-size:26px;font-weight:800;margin-bottom:4px;}
   .hero-feature p{color:var(--text-dim);font-size:14.5px;margin-bottom:16px;}
   .hero-feature .btn-primary{display:inline-block;padding:11px 24px;}
+  .hero-features{display:grid;grid-template-columns:1fr 1fr;gap:20px;width:100%;max-width:820px;margin-top:14px;}
+  .hero-features .hero-feature{flex-direction:column;align-items:flex-start;gap:16px;margin-top:0;max-width:none;}
+  .hero-features .hero-feature img{width:100%;height:auto;aspect-ratio:1/1;}
+  .hero-features .hero-feature h3{font-size:22px;}
+  @media(max-width:700px){.hero-features{grid-template-columns:1fr;max-width:420px;}}
   @media(max-width:600px){.hero-feature{flex-direction:column;text-align:center;}.hero-feature{gap:14px;padding:16px;}.hero-feature img{width:180px;height:180px;}.hero-feature h3{font-size:22px;}.hero-feature p{margin-bottom:12px;}}
   .btn-primary{background:var(--accent);color:#fff;padding:15px 34px;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;font-weight:700;transition:transform .25s,box-shadow .25s;}
   .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(227,44,20,0.4);}
@@ -190,6 +195,16 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
     <img class="hero-wordmark" src="images/wordmark-chromatic-records-transparent.svg" alt="After Hours Records">
   </div>
   <p class="sub">A home for late-night, genre-fearless music — indie, post-punk, and electronic releases from Toronto and beyond.</p>
+  <div class="hero-features">
+  <a class="hero-feature" href="https://stillwaves.bandcamp.com/album/vacant-eyes" target="_blank" rel="noopener">
+    <img src="images/stillwaves-vacant-eyes-cover.jpg" alt="Vacant Eyes cover art">
+    <div class="hero-feature-body">
+      <div class="featured-tag">New Album · Out Now on Bandcamp</div>
+      <h3>Vacant Eyes</h3>
+      <p>StillWaves — the third StillWaves album and their first on After Hours Records. Digital and CD.</p>
+      <span class="btn-primary">Listen Now</span>
+    </div>
+  </a>
   <a class="hero-feature" href="https://odonisodonis.bandcamp.com/track/no-one-is-coming-to-save-you" target="_blank" rel="noopener">
     <img src="images/no-one-is-coming-to-save-you-cover.jpg" alt="No One Is Coming To Save You cover art">
     <div class="hero-feature-body">
@@ -199,6 +214,7 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
       <span class="btn-primary">Listen Now</span>
     </div>
   </a>
+  </div>
 </section>
 
 
@@ -286,6 +302,13 @@ src="https://www.facebook.com/tr?id=28862457153361619&ev=PageView&noscript=1"
 
     <h3 class="subheading">Odonis Odonis Catalog</h3>
     <div class="releases-grid compact">
+      <a class="release-card" href="https://odonisodonis.bandcamp.com/track/no-one-is-coming-to-save-you" target="_blank" rel="noopener">
+        <img class="release-cover" src="images/no-one-is-coming-to-save-you-cover.jpg" alt="No One Is Coming To Save You cover art">
+        <div class="release-status">Out Now · Single</div>
+        <h3>No One Is Coming To Save You</h3>
+        <p>First single from <em>A Fractured Future</em>.</p>
+        <span class="release-listen">Listen →</span>
+      </a>
       <a class="release-card" href="https://hypeddit.com/shirehead-dancing-machine-odonis-odonis-remix" target="_blank" rel="noopener">
         <img class="release-cover" src="images/dancing-machine-remix-cover.jpg" alt="Dancing Machine (Odonis Odonis Remix) cover art">
         <div class="release-status">2026 · Remix</div>
